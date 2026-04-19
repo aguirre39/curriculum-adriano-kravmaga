@@ -83,18 +83,19 @@
     
     <div class="bg-tactical"></div>
 
-   <!-- NAVEGAÇÃO SUPERIOR -->
+    <!-- NAVEGAÇÃO SUPERIOR -->
     <nav class="w-full py-4 px-6 md:px-8 flex justify-center md:justify-start items-center border-b border-graydark/50 bg-darker/90 backdrop-blur-md no-print sticky top-0 z-50">
         <!-- LOGO AAKM SVG (Funciona como botão de voltar à página inicial) - Aumentado para melhor visibilidade -->
         <a href="index.html" class="flex items-center group transition-transform duration-300 hover:scale-105" title="Voltar à página inicial">
             <div class="relative flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 bg-black rounded-xl border border-graydark shadow-[0_0_10px_rgba(0,0,0,0.5)] group-hover:border-neon/50 transition-colors">
-                <!-- Tamanho do SVG aumentado (w-36 no mobile, w-44 em tablets, w-52 em desktop) -->
-                <svg viewBox="0 0 200 85" class="w-36 sm:w-44 md:w-52 h-auto drop-shadow-[0_0_2px_rgba(255,255,255,0.3)]">
+                <!-- Tamanho do SVG e ViewBox (240) ajustados para evitar cortes laterais -->
+                <svg viewBox="0 0 240 90" class="w-40 sm:w-48 md:w-56 h-auto drop-shadow-[0_0_2px_rgba(255,255,255,0.3)]">
                     <!-- Texto 'AAKM' em BRANCO para máxima legibilidade -->
-                    <text x="100" y="58" font-family="Oswald, sans-serif" font-weight="900" font-size="70" fill="#ffffff" text-anchor="middle" letter-spacing="-1">AAKM</text>
-                    <!-- Barra verde mantida para a identidade visual -->
-                    <rect x="0" y="64" width="200" height="21" fill="#39ff14" rx="2" />
-                    <text x="100" y="79" font-family="Inter, sans-serif" font-weight="900" font-size="12" fill="#000000" text-anchor="middle" letter-spacing="0.5">ADRIANO ALMEIDA KRAV MAGA</text>
+                    <text x="120" y="54" font-family="Oswald, sans-serif" font-weight="900" font-size="70" fill="#ffffff" text-anchor="middle" letter-spacing="-1">AAKM</text>
+                    <!-- Barra verde mais larga para acomodar as letras com o novo espaçamento -->
+                    <rect x="0" y="64" width="240" height="22" fill="#39ff14" rx="2" />
+                    <!-- Frase perfeitamente legível e sem ser cortada -->
+                    <text x="120" y="78" font-family="Inter, sans-serif" font-weight="900" font-size="11" fill="#000000" text-anchor="middle" letter-spacing="1.5">ADRIANO ALMEIDA KRAV MAGA</text>
                 </svg>
             </div>
         </a>
