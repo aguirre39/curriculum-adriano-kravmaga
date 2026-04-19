@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico para o Currículo -->
+    <title>Currículo - Mestre Adriano Almeida | AAKM</title>
+    <meta name="description" content="Currículo profissional de Adriano Almeida, Guarda Civil Metropolitano, Mestre de Krav Maga e Especialista em Segurança Pública.">
+    <meta name="author" content="Adriano Almeida">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração Customizada do Tailwind e Cores -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#39ff14',
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        graydark: '#1f1f1f'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Oswald:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #f3f4f6; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        
+        .bg-tactical {
+            background-image: radial-gradient(#39ff14 0.5px, transparent 0.5px), radial-gradient(#39ff14 0.5px, #050505 0.5px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            background-attachment: fixed;
+            opacity: 0.05;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .btn-neon {
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.3), inset 0 0 5px rgba(57, 255, 20, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-neon:hover {
+            box-shadow: 0 0 25px rgba(57, 255, 20, 0.7), inset 0 0 10px rgba(57, 255, 20, 0.3);
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        
+        /* ==================================================================
+           CONFIGURAÇÃO BÁSICA DE IMPRESSÃO
+           ================================================================== */
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .bg-tactical { display: none !important; }
+            * { color: black !important; border-color: #ccc !important; }
+            h1, h2, h3 { color: black !important; }
+            .text-neon { color: black !important; font-weight: bold; }
+            .bg-dark, .bg-darker { background-color: white !important; border: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-neon selection:text-black">
+    
+    <div class="bg-tactical"></div>
+
+    <!-- NAVEGAÇÃO SUPERIOR -->
+    <nav class="w-full py-4 px-6 md:px-8 flex justify-center md:justify-start items-center border-b border-graydark/50 bg-darker/90 backdrop-blur-md no-print sticky top-0 z-50">
+        <!-- LOGO AAKM SVG (Funciona como botão de voltar à página inicial) -->
+        <a href="index.html" class="flex items-center group transition-transform duration-300 hover:scale-105" title="Voltar à página inicial">
+            <div class="relative flex items-center justify-center px-6 py-2.5 bg-black rounded-xl border border-graydark shadow-[0_0_10px_rgba(0,0,0,0.5)] group-hover:border-neon/50 transition-colors">
+                <svg viewBox="0 0 200 85" class="h-10 md:h-12 w-auto drop-shadow-[0_0_2px_rgba(255,255,255,0.3)]">
+                    <!-- Texto 'AAKM' em BRANCO para máxima legibilidade -->
+                    <text x="100" y="58" font-family="Oswald, sans-serif" font-weight="900" font-size="70" fill="#ffffff" text-anchor="middle" letter-spacing="-1">AAKM</text>
+                    <!-- Barra verde mantida para a identidade visual -->
+                    <rect x="0" y="64" width="200" height="21" fill="#39ff14" rx="2" />
+                    <text x="100" y="79" font-family="Inter, sans-serif" font-weight="900" font-size="12" fill="#000000" text-anchor="middle" letter-spacing="0.5">ADRIANO ALMEIDA KRAV MAGA</text>
+                </svg>
+            </div>
+        </a>
+    </nav>
+
+    <!-- "FOLHA" DO CURRÍCULO ONLINE -->
+    <div class="max-w-5xl mx-auto my-8 bg-dark border border-graydark rounded-2xl shadow-2xl overflow-hidden relative">
+        
+        <!-- HEADER DO CURRÍCULO (FOTO E INFO) -->
+        <header class="p-8 md:p-12 border-b border-graydark bg-gradient-to-b from-darker to-dark flex flex-col md:flex-row items-center md:items-start gap-8 relative">
+            
+            <!-- Botão de Download do PDF Original (Mobile: Topo | Desktop: Canto Direito) -->
+            <div class="absolute top-6 right-6 no-print hidden md:block">
+                <a href="Currículo ADRIANO ALMEIDA.pdf" download="Curriculo_Adriano_Almeida.pdf" class="btn-neon bg-neon text-black font-black text-xs uppercase tracking-widest py-3 px-5 rounded-lg inline-flex items-center gap-2 hover:bg-white hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg z-20">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Baixar PDF
+                </a>
+            </div>
+
+            <!-- FOTO DE PERFIL -->
+            <div class="shrink-0 relative fade-in">
+                <div class="absolute inset-0 bg-neon blur-[20px] opacity-20 rounded-full"></div>
+                <img src="img/foto_curriculum.png" alt="Mestre Adriano Almeida" class="relative z-10 w-40 h-40 md:w-52 md:h-52 object-cover object-top rounded-full border-4 border-graydark shadow-xl">
+            </div>
+
+            <!-- INFORMAÇÕES PESSOAIS -->
+            <div class="text-center md:text-left flex-1 fade-in">
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-2 tracking-tight">ADRIANO <span class="text-neon">ALMEIDA</span></h1>
+                <h2 class="text-lg md:text-xl font-bold text-gray-400 tracking-widest uppercase mb-6 border-b-2 border-neon inline-block pb-1">Guarda Civil Metropolitano</h2>
+                
+                <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
+                    Sou Adriano Almeida, Guarda Civil Metropolitano de Porto Alegre-RS. Especialista em Segurança Pública e Institucional, Instrutor de Defesa Pessoal, Mestre de Krav Maga e Palestrante da Psicologia da Autodefesa e Sobrevivência.
+                </p>
+
+                <!-- Informações de Contato -->
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 text-sm font-semibold text-gray-300">
+                    <a href="https://wa.me/5551985200349" class="flex items-center gap-2 hover:text-neon transition-colors bg-graydark/40 px-3 py-2 rounded-lg border border-graydark">
+                        <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        (51) 98520-0349
+                    </a>
+                    <a href="mailto:adrianoalmeidakmc@gmail.com" class="flex items-center gap-2 hover:text-neon transition-colors bg-graydark/40 px-3 py-2 rounded-lg border border-graydark">
+                        <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        adrianoalmeidakmc@gmail.com
+                    </a>
+                    <a href="https://www.segautrs.com" target="_blank" class="flex items-center gap-2 hover:text-neon transition-colors bg-graydark/40 px-3 py-2 rounded-lg border border-graydark">
+                        <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        www.segautrs.com
+                    </a>
+                </div>
+
+                <!-- Botão de Download Mobile -->
+                <div class="mt-6 md:hidden no-print">
+                    <a href="Currículo ADRIANO ALMEIDA.pdf" download="Curriculo_Adriano_Almeida.pdf" class="btn-neon bg-neon text-black font-black text-sm uppercase tracking-widest py-3 px-5 rounded-lg w-full flex items-center justify-center gap-2 hover:bg-white transition-colors cursor-pointer shadow-lg z-20">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Baixar PDF
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- CORPO DO CURRÍCULO -->
+        <main class="p-8 md:p-12 grid lg:grid-cols-3 gap-12 bg-dark">
+            
+            <!-- COLUNA ESQUERDA (Experiência + Cursos) -->
+            <div class="lg:col-span-2 space-y-12">
+                
+                <!-- EXPERIÊNCIA PROFISSIONAL -->
+                <section class="fade-in break-inside-avoid">
+                    <div class="flex items-center gap-3 mb-8 border-b border-graydark pb-4">
+                        <div class="w-10 h-10 bg-neon/10 rounded-xl flex items-center justify-center border border-neon/50">
+                            <svg class="w-5 h-5 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Experiência Profissional</h3>
+                    </div>
+                    
+                    <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-graydark before:to-transparent">
+                        
+                        <!-- Item -->
+                        <div class="break-inside-avoid relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-neon text-darker shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-darker border border-graydark p-6 rounded-xl shadow-md group-hover:border-neon transition-colors">
+                                <div class="text-neon font-bold text-xs tracking-wider mb-1 uppercase">Atual (há mais de 9 anos)</div>
+                                <h4 class="font-bold text-white text-xl">Assessoria de Segurança Institucional (ASI)</h4>
+                                <p class="text-gray-400 text-sm mt-2">Gabinete do Prefeito de Porto Alegre.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="break-inside-avoid relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-graydark text-gray-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-neon group-hover:text-darker transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.5-4.879l-3-3A1 1 0 007 11.535V14a1 1 0 001 1h4a1 1 0 001-1v-2.465a1 1 0 00-.5-.866z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-darker border border-graydark p-6 rounded-xl shadow-md group-hover:border-neon transition-colors">
+                                <div class="text-gray-500 font-bold text-xs tracking-wider mb-1 uppercase">2020 - 2021</div>
+                                <h4 class="font-bold text-white text-xl">Comandante ROMU</h4>
+                                <p class="text-gray-400 text-sm mt-2">Grupamento da Ronda Ostensiva Municipal.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="break-inside-avoid relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-graydark text-gray-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-neon group-hover:text-darker transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.5-4.879l-3-3A1 1 0 007 11.535V14a1 1 0 001 1h4a1 1 0 001-1v-2.465a1 1 0 00-.5-.866z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-darker border border-graydark p-6 rounded-xl shadow-md group-hover:border-neon transition-colors">
+                                <div class="text-gray-500 font-bold text-xs tracking-wider mb-1 uppercase">2015 - Presente</div>
+                                <h4 class="font-bold text-white text-xl">Batedor Motociclista</h4>
+                                <p class="text-gray-400 text-sm mt-2">Atuação em várias escoltas presidenciais e de autoridades públicas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="break-inside-avoid relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-graydark text-gray-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-neon group-hover:text-darker transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.5-4.879l-3-3A1 1 0 007 11.535V14a1 1 0 001 1h4a1 1 0 001-1v-2.465a1 1 0 00-.5-.866z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-darker border border-graydark p-6 rounded-xl shadow-md group-hover:border-neon transition-colors">
+                                <div class="text-gray-500 font-bold text-xs tracking-wider mb-1 uppercase">2013 - 2017</div>
+                                <h4 class="font-bold text-white text-xl">Comandante GEM</h4>
+                                <p class="text-gray-400 text-sm mt-2">Grupamento Especial Motorizado.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="break-inside-avoid relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-graydark text-gray-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-neon group-hover:text-darker transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.5-4.879l-3-3A1 1 0 007 11.535V14a1 1 0 001 1h4a1 1 0 001-1v-2.465a1 1 0 00-.5-.866z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-darker border border-graydark p-6 rounded-xl shadow-md group-hover:border-neon transition-colors">
+                                <div class="text-gray-500 font-bold text-xs tracking-wider mb-1 uppercase">Desde 2010</div>
+                                <h4 class="font-bold text-white text-xl">Guarda Civil Metropolitano</h4>
+                                <p class="text-gray-400 text-sm mt-2">Profissional da área de Segurança Pública com mais de 20 anos de experiência.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="break-inside-avoid relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-graydark text-gray-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-neon group-hover:text-darker transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.5-4.879l-3-3A1 1 0 007 11.535V14a1 1 0 001 1h4a1 1 0 001-1v-2.465a1 1 0 00-.5-.866z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-darker border border-graydark p-6 rounded-xl shadow-md group-hover:border-neon transition-colors">
+                                <div class="text-gray-500 font-bold text-xs tracking-wider mb-1 uppercase">1992 - 1998</div>
+                                <h4 class="font-bold text-white text-xl">3º Sargento do Exército Brasileiro</h4>
+                                <p class="text-gray-400 text-sm mt-2">Pelotão de Operações Especiais (PELOPES).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="break-inside-avoid mt-8 bg-neon/5 border border-neon/30 p-6 rounded-xl text-gray-300 italic text-base leading-relaxed">
+                        "Possuo relevante experiência como mestre de Krav Maga, defesa pessoal e treinamento de equipes em órgãos públicos e privados. Atuei como instrutor de forças policiais e militares. Fundador do método Adriano Almeida Krav Maga - AAKM e palestrante na área de Autodefesa e Psicologia da Sobrevivência."
+                    </div>
+                </section>
+
+                <!-- QUALIFICAÇÕES OPERACIONAIS -->
+                <section class="fade-in pt-6 break-inside-avoid">
+                    <div class="flex items-center gap-3 mb-8 border-b border-graydark pb-4">
+                        <div class="w-10 h-10 bg-neon/10 rounded-xl flex items-center justify-center border border-neon/50">
+                            <svg class="w-5 h-5 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Qualificações Operacionais & Cursos</h3>
+                    </div>
+
+                    <div class="bg-darker rounded-xl border border-graydark p-8">
+                        <ul class="space-y-5 text-gray-300 text-base">
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor de Defesa Pessoal da Guarda Municipal de Porto Alegre/RS.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Consultor e Especialista em Treinamento na Área de Segurança Escolar.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor do Estágio de Lutas do Exército Brasileiro.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor de Lâminas - EXTREME BLADEOLOGY - 2023.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor de Panantukan - Filipino Boxing - 2018.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor no Curso Proteção de Autoridades do Exército Brasileiro (ESPA) - 2014, 2015, 2016, 2019 e 2022.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Curso de Batedor Motociclista do Exército Brasileiro - 2015.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor no Curso Proteção de Autoridades do Exército Brasileiro (ESPA) Ministério Público (Desembargadores, Juízes, Procuradores e Promotores Federais e Estaduais) - 2015, 2016 e 2022.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor do Grupamento Especial Motorizado (GEM) Guarda Municipal de POA - 2014 a 2017.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="w-2 h-2 bg-neon rounded-full mt-2.5 shrink-0 shadow-[0_0_5px_#39ff14]"></div>
+                                <p>Instrutor do Curso de Operações Penitenciárias Especiais (COPE) - 2018 e 2019.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLUNA DIREITA (Educação) -->
+            <div class="space-y-12">
+                
+                <!-- FORMAÇÃO ACADÊMICA -->
+                <section class="fade-in break-inside-avoid">
+                    <div class="flex items-center gap-3 mb-8 border-b border-graydark pb-4">
+                        <div class="w-10 h-10 bg-neon/10 rounded-xl flex items-center justify-center border border-neon/50">
+                            <svg class="w-5 h-5 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Formação</h3>
+                    </div>
+
+                    <div class="bg-darker border border-graydark rounded-xl p-6">
+                        <div class="text-neon font-bold text-xs uppercase mb-1">2014</div>
+                        <h4 class="text-white font-bold text-xl mb-1">Graduação em Gestão Pública</h4>
+                        <p class="text-gray-400 text-sm">Universidade Uniasselvi</p>
+                    </div>
+                </section>
+
+                <!-- FORMAÇÃO COMPLEMENTAR -->
+                <section class="fade-in break-inside-avoid">
+                    <div class="flex items-center gap-3 mb-8 border-b border-graydark pb-4">
+                        <div class="w-10 h-10 bg-neon/10 rounded-xl flex items-center justify-center border border-neon/50">
+                            <svg class="w-5 h-5 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Complementar</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="break-inside-avoid bg-darker border border-graydark rounded-xl p-5 border-l-4 border-l-neon">
+                            <div class="text-gray-500 font-bold text-xs uppercase mb-1">FOCUS - 2023</div>
+                            <h4 class="text-white font-bold text-base leading-snug">MBA - Gestão em Segurança Pública</h4>
+                        </div>
+
+                        <div class="break-inside-avoid bg-darker border border-graydark rounded-xl p-5 border-l-4 border-l-neon">
+                            <div class="text-gray-500 font-bold text-xs uppercase mb-1">Hansei 360 - 2020</div>
+                            <h4 class="text-white font-bold text-base leading-snug">Curso de Leitura Facial das Emoções e Detecção de Ameaças</h4>
+                        </div>
+
+                        <div class="break-inside-avoid bg-darker border border-graydark rounded-xl p-5 border-l-4 border-l-neon">
+                            <div class="text-gray-500 font-bold text-xs uppercase mb-1">CEIT - 2017</div>
+                            <h4 class="text-white font-bold text-base leading-snug">Curso de Direção Defensiva e Evasiva</h4>
+                        </div>
+
+                        <div class="break-inside-avoid bg-darker border border-graydark rounded-xl p-5 border-l-4 border-l-neon">
+                            <div class="text-gray-500 font-bold text-xs uppercase mb-1">Comando Militar do Sul - 2017</div>
+                            <h4 class="text-white font-bold text-base leading-snug">Curso de Direção Tática Antissequestro</h4>
+                        </div>
+
+                        <div class="break-inside-avoid bg-darker border border-graydark rounded-xl p-5 border-l-4 border-l-neon">
+                            <div class="text-gray-500 font-bold text-xs uppercase mb-1">Polícia Civil - 2014</div>
+                            <h4 class="text-white font-bold text-base leading-snug">Curso de Dignitários</h4>
+                        </div>
+
+                        <div class="break-inside-avoid bg-darker border border-graydark rounded-xl p-5 border-l-4 border-l-neon">
+                            <div class="text-gray-500 font-bold text-xs uppercase mb-1">CEAS - 2015</div>
+                            <h4 class="text-white font-bold text-base leading-snug">Curso Internacional KRAV MAGA</h4>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div> <!-- Fim da "Folha" principal -->
+
+    <footer class="bg-darker py-8 border-t border-graydark mt-12 no-print">
+        <div class="text-center text-xs text-gray-600">
+            &copy; 2026 Mestre Adriano Almeida. Todos os direitos reservados. 
+        </div>
+    </footer>
+
+    <!-- SCRIPT para Animação de entrada -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
